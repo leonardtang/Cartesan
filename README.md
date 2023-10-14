@@ -1,0 +1,1 @@
+# Autonomous Fridge Assistant (Placeholder)
