@@ -1,4 +1,36 @@
 import re
+import openai_api
+
+model = 'gpt-4'
+
+agent = openai_api.OpenAI_API(model=model)
+
+def get_required_ingredients(food_name:str):
+    prompt = f"""
+    List the ingredients required to make {food_name} (Just create a list of items with no other text or information)
+    """
+    response = agent.chatgpt(prompt)
+    return response
+    
+
+def get_ingredients_to_buy(food_name, ingredients_we_need, ingredients_we_have):
+    prompt = f"""
+    We are trying to make {food_name} and we need the following ingredients:
+    {ingredients_we_need}
+    
+    But we only have the following ingredients at home:
+    {ingredients_we_have}
+    
+    List all of the ingredients we need to buy in this format (Just output the list of ingredients with no other information or text):
+    <Example Format>
+    1. A bottle of hot sauce
+    2. Two brown containers
+    3. A bottle of white liquid, labeled "CREAMER"
+    
+    <Ingredients to buy to make {food_name}>
+    """
+    response = agent.chatgpt(prompt)
+    return parse_ingredients(response)
 
 def parse_ingredients(response_str):
     pattern = re.compile(r'^\d+\.\s+(.+)$', re.MULTILINE)
