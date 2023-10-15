@@ -1,12 +1,23 @@
 import gradio as gr
 import os
+import io
 import numpy as np
 from openai_interface import OpenAIInterface
 from parse_ingredients import parse_ingredients
 from test import workflow
+from PIL import Image
+import boto3
+from fridge_detector import make_fridge_request
 
-def get_ingredients_recipe(text, fridge_image:np.ndarray=None):
-    print("fridge Image", fridge_image)
+AWS_ACCESS_KEY = 'AKIAXGZCIJYW3PH2UFNN'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'cartesan'
+
+def get_ingredients_recipe(text, fridge_image):
+    # get fridge ingredients
+    image_url = upload_to_s3(fridge_image)
+    fridge_contents = make_fridge_request(image_url)
+
     openai_interface = OpenAIInterface(api_key='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')
     ingredients_prompt = f"""
     You are helping me make the food I want to eat. I want to cook {text} today.
@@ -30,6 +41,29 @@ def get_ingredients_recipe(text, fridge_image:np.ndarray=None):
     print('Recipe', recipe)
     return recipe.strip()
 
+def upload_to_s3(image):
+    # save fridge image in memory
+    in_mem_file = io.BytesIO()
+    image.save(in_mem_file, format = "PNG")
+    in_mem_file.seek(0)
+
+    # upload to s3
+    object_name = f'fridge_{np.random.randint(0, 1000000)}.png'
+    client = boto3.client(
+        's3',
+        aws_access_key_id=AWS_ACCESS_KEY,
+        aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+    )
+
+    client.upload_fileobj(
+        in_mem_file,
+        AWS_STORAGE_BUCKET_NAME, # s3 bucket name
+        object_name, # s3 bucket key
+        ExtraArgs={'ACL':'public-read'}
+    )
+
+    return f'https://{AWS_STORAGE_BUCKET_NAME}.s3.us-west-1.amazonaws.com/{object_name}'
+
 def mirror(x):
     return x
 
@@ -40,9 +74,7 @@ with gr.Blocks() as demo:
 
     # TODO: Call UI interaction for this
     with gr.Row():
-        im = gr.Image()
-    # btn = gr.Button(value="Upload a Picture of your Fridge")
-    # btn.click(mirror, inputs=[im])
+        im = gr.Image(image_mode='RGB', type='pil')
 
     btn = gr.Button(value="Ask Cartesan!")
     output_txt = gr.Textbox(value="", label="Recipe")
