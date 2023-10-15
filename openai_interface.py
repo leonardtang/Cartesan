@@ -11,6 +11,7 @@ class OpenAIInterface:
             openai.api_key = api_key
         else:
             openai.api_key = os.getenv("OPENAI_API_KEY")
+            print('openai.api_key', openai.api_key)
 
         if not openai.api_key:
             logging.getLogger('sys').warning(f'No OpenAI API key given!')
