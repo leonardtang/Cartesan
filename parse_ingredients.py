@@ -53,8 +53,8 @@ def get_ingredients_to_buy(food_name, ingredients_we_need, ingredients_we_have):
     return parse_ingredients(response)
 
 def parse_ingredients(response_str):
-    pattern = re.compile(r'^\d+\.\s+(.+)$', re.MULTILINE)
-    items = re.findall(pattern, response_str)
+    # pattern = re.compile(r'(?<=\d\.\s)([^\n]+)', re.MULTILINE)
+    items = re.findall(r'(?<=\d\.\s)([^\n]+)', response_str)
     items = [item.strip() for item in items]
     return items
 

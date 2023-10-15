@@ -8,16 +8,20 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from undetected_chromedriver import Chrome
-
+# from selenium.webdriver import Chrome
 
 class ChatGPTBot:
     def __init__(self):
+        print('start of init')
         self.driver = Chrome()
+        print('before get')
         self.driver.get("https://chat.openai.com/")
         self.cookies_path = "cookies.pkl"
         time.sleep(2)
+        print('try init')
         # Eventually have nice first-time cookie setup, like here: https://stackoverflow.com/questions/45417335/python-use-cookie-to-login-with-selenium
         try:
+            print('Attempting cookies load')
             cookies = pickle.load(open(self.cookies_path, "rb"))
         except:
             # First-time cookie setup. Login to ChatGPT then go to terminal to proceed
@@ -91,7 +95,8 @@ if __name__ == "__main__":
         try:
             print("Attempting to initialize...")
             bot = ChatGPTBot()
-            bot.click_through_popups()
+            time.sleep(2)
+            # bot.click_through_popups()
         except:
             print("Error during popup clickthrough")
             time.sleep(2)

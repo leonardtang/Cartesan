@@ -1,4 +1,5 @@
 from os import access
+from pprint import pprint
 from random import randint
 from typing import List, Dict
 import jwt.utils
@@ -7,7 +8,7 @@ import math
 import openai
 import requests
 
-openai.api_key = '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'
+openai.api_key = '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'
 openai.Model.list()
 
 def random_with_N_digits(n):
@@ -25,7 +26,6 @@ def format_items(items) -> List[Dict]:
                 {"role": "user", "content": f"Can you describe in one brief sentence the following grocery item: {item}"},
             ]
         )
-        print(response)
         end_item = {
             'name': item,
             'description': response['choices'][0]['message']['content'],
@@ -92,16 +92,12 @@ def order(items: List[Dict]):
     }
 
     create_delivery = requests.post(endpoint, headers=headers, json=request_body) # Create POST request
-    print(create_delivery.status_code)
-    print(create_delivery.text)
-    print(create_delivery.reason)
+    pprint(create_delivery.text)
 
     time.sleep(2)
     cancel_endpoint = f"https://openapi.doordash.com/drive/v2/deliveries/{request_body['external_delivery_id']}/cancel"
     cancel_request = requests.put(cancel_endpoint, headers=headers, json=request_body["external_delivery_id"])
-    print(cancel_request.status_code)
-    print(cancel_request.text)
-    print(cancel_request.reason)
+    pprint(cancel_request.text)
 
 if __name__ == "__main__":
     order(items=['Apple'])
