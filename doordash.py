@@ -19,16 +19,16 @@ def random_with_N_digits(n):
 def format_items(items) -> List[Dict]:
     end_items = []
     for item in items:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert at describing grocery store items."},
-                {"role": "user", "content": f"Can you describe in one brief sentence the following grocery item: {item}"},
-            ]
-        )
+        # response = openai.ChatCompletion.create(
+        #     model="gpt-3.5-turbo",
+        #     messages=[
+        #         {"role": "system", "content": "You are an expert at describing grocery store items."},
+        #         {"role": "user", "content": f"Can you describe in one brief sentence the following grocery item: {item}"},
+        #     ]
+        # )
         end_item = {
             'name': item,
-            'description': response['choices'][0]['message']['content'],
+            'description': item,
             'quantity': 1, # TODO: handle quantity in ingredient parsing as well
         }
         end_items.append(end_item)
@@ -61,34 +61,16 @@ def order(items: List[Dict]):
     deliv_id = f"D-{random_with_N_digits(12)}"
     request_body = {
         "external_delivery_id": deliv_id,
-        "pickup_address": "1450 Howard Ave, Burlingame, CA 94010",
-        "pickup_business_name": "Wells Fargo SF Downtown",
-        "pickup_phone_number": "+18603578008",
-        "pickup_instructions": "",
+        "pickup_address": None,
+        "pickup_business_name": None,
+        "pickup_phone_number": None,
+        "pickup_instructions": None,
         "dropoff_address": "1868 Floribunda Ave, Hillsborough, CA 94010",
-        "dropoff_business_name": "Wells Fargo SF Downtown",
+        "dropoff_business_name": "Cartesan",
         "dropoff_phone_number": "+18603578008",
         "dropoff_instructions": "Call Leonard Tang at dropoff phone number",
         "order_value": 1999,
-        # "items": [
-        #     {
-        #         "name": "Mega Bean and Cheese Burrito",
-        #         "description": "Mega Burrito contains the biggest beans of the land with extra cheese.",
-        #         "quantity": 1,
-        #         # "external_id": "123-123443434b",
-        #         # "external_instance_id": 12,
-        #         # "volume": 5.3,
-        #         # "weight": 2.8,
-        #         # "length": 2.8,
-        #         # "width": 2.8,
-        #         # "height": 2.8,
-        #         # "price": 1000,
-        #         # "barcode": 12342830041,
-        #         # "item_options": {}
-        #     }
-        # ]
         "items": format_items(items)
-        # TODO: include list of DeliveryItems
     }
 
     create_delivery = requests.post(endpoint, headers=headers, json=request_body) # Create POST request
@@ -97,7 +79,7 @@ def order(items: List[Dict]):
     time.sleep(2)
     cancel_endpoint = f"https://openapi.doordash.com/drive/v2/deliveries/{request_body['external_delivery_id']}/cancel"
     cancel_request = requests.put(cancel_endpoint, headers=headers, json=request_body["external_delivery_id"])
-    pprint(cancel_request.text)
+    print('End of order request!')
 
 if __name__ == "__main__":
     order(items=['Apple'])

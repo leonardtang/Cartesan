@@ -4,14 +4,6 @@ from datetime import datetime
 import parse_ingredients
 import openai_api
 
-# Ingredients in the fridge
-example_ingredients = """
-1. Beef
-2. Peppers
-3. Beans
-4. Salsa
-"""
-
 def test_parse_ingredients(str, desired_output=None):
     if desired_output is not None:
         assert(parse_ingredients.parse_ingredients(str) == desired_output)
@@ -38,9 +30,6 @@ def update_db(data, ingredients_in_fridge):
     data.append(new_fridge_json)
     json.dump(data, open(f'ingredients.json', 'w'))
 
-def get_ingredients_in_fridge():
-    return example_ingredients
-
 def workflow(required_ingredients, example_ingredients):
     data = json.load(open(f'ingredients.json'))
     
@@ -56,7 +45,7 @@ def workflow(required_ingredients, example_ingredients):
     ingredients_in_fridge_embeddings = [openai_api.get_embedding(ingredient) for ingredient in ingredients_in_fridge]
     ingredients_to_buy = parse_ingredients.get_ingredients_to_buy_embedding(required_ingredients_embeddings, ingredients_in_fridge_embeddings, threshold=0.85)
     ingredients_to_buy = [required_ingredients[ingredient_index] for ingredient_index in ingredients_to_buy]
-    
+
     # print("\n----------\n")
     # print(f"\nIngredients to buy (indexes):\n{ingredients_to_buy}")
     # print(f"\nIngredients to buy (Embedding Search):\n{ingredients_to_buy}")
@@ -64,7 +53,7 @@ def workflow(required_ingredients, example_ingredients):
     # ingredients_to_buy = check_ingredients(required_ingredients, parse_ingredients.get_ingredients_to_buy(food_name, required_ingredients, ingredients_in_fridge))
     print(f"\nIngredients to buy (LLM Search):\n{ingredients_to_buy}")
     
-    return ingredients_to_buy, data
+    return ingredients_to_buy, '\n'.join(data[-1]['ingredients in fridge'])
 
 if __name__ == "__main__":
     workflow()
