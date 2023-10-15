@@ -1,5 +1,7 @@
-import parse_ingredients
+import json
+from datetime import datetime
 
+import parse_ingredients
 import openai_api
 
 # Ingredients in the fridge
@@ -28,15 +30,26 @@ def check_ingredients(required_ingredients, ingredients_to_buy):
             ingredients_to_buy.remove(ingredient)
     return ingredients_to_buy
 
+def update_db(data, ingredients_in_fridge):
+    new_fridge_json = {
+        "datetime": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+        "ingredients in fridge": ingredients_in_fridge
+    }
+    data.append(new_fridge_json)
+    json.dump(data, open(f'ingredients.json', 'w'))
+
 def get_ingredients_in_fridge():
     return example_ingredients
 
 def workflow():
+    data = json.load(open(f'ingredients.json'))
+    
     food_name = input("What food do you want to make?\n")
     required_ingredients = parse_ingredients.parse_ingredients((parse_ingredients.get_required_ingredients(food_name)))
     print(f"\nRequired ingredients for {food_name}:\n{required_ingredients}")
     ingredients_in_fridge = parse_ingredients.parse_ingredients(get_ingredients_in_fridge())
     print(f"\nIngredients in fridge:\n{ingredients_in_fridge}")
+    update_db(data, ingredients_in_fridge)
     
     required_ingredients_embeddings = [openai_api.get_embedding(ingredient) for ingredient in required_ingredients]
     
