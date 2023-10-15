@@ -22,8 +22,11 @@ def test_required_ingredients(food_name, desired_output=None):
     else:
         print(parse_ingredients.get_required_ingredients(food_name))
 
-def check_ingredients(required_ingredietnts, ingredients_to_buy):
-    pass
+def check_ingredients(required_ingredients, ingredients_to_buy):
+    for ingredient in ingredients_to_buy:
+        if ingredient not in required_ingredients:
+            ingredients_to_buy.remove(ingredient)
+    return ingredients_to_buy
 
 def get_ingredients_in_fridge():
     return example_ingredients
@@ -33,18 +36,22 @@ def workflow():
     required_ingredients = parse_ingredients.parse_ingredients((parse_ingredients.get_required_ingredients(food_name)))
     print(f"\nRequired ingredients for {food_name}:\n{required_ingredients}")
     ingredients_in_fridge = parse_ingredients.parse_ingredients(get_ingredients_in_fridge())
+    print(f"\nIngredients in fridge:\n{ingredients_in_fridge}")
     
     required_ingredients_embeddings = [openai_api.get_embedding(ingredient) for ingredient in required_ingredients]
     
     ingredients_in_fridge_embeddings = [openai_api.get_embedding(ingredient) for ingredient in ingredients_in_fridge]
     
-    print(f"\nIngredients in fridge:\n{ingredients_in_fridge}")
     ingredients_to_buy = parse_ingredients.get_ingredients_to_buy_embedding(required_ingredients_embeddings, ingredients_in_fridge_embeddings, threshold=0.85)
-    # ingredients_to_buy = parse_ingredients.get_ingredients_to_buy(food_name, required_ingredients, ingredients_in_fridge)
     
+    print("\n----------\n")
     print(f"\nIngredients to buy (indexes):\n{ingredients_to_buy}")
     ingredients_to_buy = [required_ingredients[ingredient_index] for ingredient_index in ingredients_to_buy]
-    print(f"\nIngredients to buy:\n{ingredients_to_buy}")
+    print(f"\nIngredients to buy (Embedding Search):\n{ingredients_to_buy}")
+    print("\n----------\n")
+    ingredients_to_buy = check_ingredients(required_ingredients, parse_ingredients.get_ingredients_to_buy(food_name, required_ingredients, ingredients_in_fridge))
+    print(f"\nIngredients to buy (LLM Search):\n{ingredients_to_buy}")
+    
     
 
 if __name__ == "__main__":

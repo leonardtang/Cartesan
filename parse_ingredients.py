@@ -41,11 +41,11 @@ def get_ingredients_to_buy(food_name, ingredients_we_need, ingredients_we_have):
     But we only have the following ingredients at home:
     {ingredients_we_have}
     
-    List all of the ingredients we need to buy in this format (Just output the list of ingredients with no other information or text):
+    List all of the ingredients we need to buy in this format, don't include the items we have at home or can be used to make the ingredients required for making the food (Just output the list of ingredients with no other information or text):
     <Example Format>
-    1. A bottle of hot sauce
-    2. Two brown containers
-    3. A bottle of white liquid, labeled "CREAMER"
+    1. Hot sauce
+    2. Brown containers
+    3. Water
     
     <Ingredients to buy to make {food_name}>
     """
@@ -55,6 +55,7 @@ def get_ingredients_to_buy(food_name, ingredients_we_need, ingredients_we_have):
 def parse_ingredients(response_str):
     pattern = re.compile(r'^\d+\.\s+(.+)$', re.MULTILINE)
     items = re.findall(pattern, response_str)
+    items = [item.strip() for item in items]
     return items
 
 # ----- Example -----
