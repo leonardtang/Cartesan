@@ -30,14 +30,14 @@ def update_db(data, ingredients_in_fridge):
     data.append(new_fridge_json)
     json.dump(data, open(f'ingredients.json', 'w'))
 
-def workflow(required_ingredients, example_ingredients):
+def workflow(required_ingredients, existing_ingredients):
     data = json.load(open(f'ingredients.json'))
     
     # food_name = input("What food do you want to make?\n")
     # required_ingredients = parse_ingredients.parse_ingredients((parse_ingredients.get_required_ingredients(food_name)))
     # required_ingredients = parse_ingredients.parse_ingredients((required_ingredients_raw))
     # print(f"\nRequired ingredients for {food_name}:\n{required_ingredients}")
-    ingredients_in_fridge = parse_ingredients.parse_ingredients(example_ingredients)
+    ingredients_in_fridge = existing_ingredients
     print(f"\nIngredients in fridge:\n{ingredients_in_fridge}")
     update_db(data, ingredients_in_fridge)
     

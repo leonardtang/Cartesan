@@ -1,0 +1,691 @@
+{
+  "google": {
+    "status": "success",
+    "items": [
+      {
+        "label": "Packaged goods",
+        "confidence": 0.78175014,
+        "x_min": 0.8467347,
+        "x_max": 0.8467347,
+        "y_min": 0.25905117,
+        "y_max": 0.25905117
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.78175014,
+        "x_min": 0.8467347,
+        "x_max": 0.92950207,
+        "y_min": 0.25905117,
+        "y_max": 0.25905117
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.78175014,
+        "x_min": 0.8467347,
+        "x_max": 0.92950207,
+        "y_min": 0.25905117,
+        "y_max": 0.5523463
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.78175014,
+        "x_min": 0.8467347,
+        "x_max": 0.92950207,
+        "y_min": 0.25905117,
+        "y_max": 0.5523463
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.7052995,
+        "x_min": 0.7802808,
+        "x_max": 0.7802808,
+        "y_min": 0.24588287,
+        "y_max": 0.24588287
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.7052995,
+        "x_min": 0.7802808,
+        "x_max": 0.85546285,
+        "y_min": 0.24588287,
+        "y_max": 0.24588287
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.7052995,
+        "x_min": 0.7802808,
+        "x_max": 0.85546285,
+        "y_min": 0.24588287,
+        "y_max": 0.5433106
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.7052995,
+        "x_min": 0.7802808,
+        "x_max": 0.85546285,
+        "y_min": 0.24588287,
+        "y_max": 0.5433106
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.70176315,
+        "x_min": 0.930473,
+        "x_max": 0.930473,
+        "y_min": 0.26024598,
+        "y_max": 0.26024598
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.70176315,
+        "x_min": 0.930473,
+        "x_max": 0.9963122,
+        "y_min": 0.26024598,
+        "y_max": 0.26024598
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.70176315,
+        "x_min": 0.930473,
+        "x_max": 0.9963122,
+        "y_min": 0.26024598,
+        "y_max": 0.55304545
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.70176315,
+        "x_min": 0.930473,
+        "x_max": 0.9963122,
+        "y_min": 0.26024598,
+        "y_max": 0.55304545
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6759496,
+        "x_min": 0.004512141,
+        "x_max": 0.004512141,
+        "y_min": 0.7441668,
+        "y_max": 0.7441668
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6759496,
+        "x_min": 0.004512141,
+        "x_max": 0.06818458,
+        "y_min": 0.7441668,
+        "y_max": 0.7441668
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6759496,
+        "x_min": 0.004512141,
+        "x_max": 0.06818458,
+        "y_min": 0.7441668,
+        "y_max": 0.95147634
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6759496,
+        "x_min": 0.004512141,
+        "x_max": 0.06818458,
+        "y_min": 0.7441668,
+        "y_max": 0.95147634
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.63718563,
+        "x_min": 0.10599857,
+        "x_max": 0.10599857,
+        "y_min": 0.69183177,
+        "y_max": 0.69183177
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.63718563,
+        "x_min": 0.10599857,
+        "x_max": 0.1678689,
+        "y_min": 0.69183177,
+        "y_max": 0.69183177
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.63718563,
+        "x_min": 0.10599857,
+        "x_max": 0.1678689,
+        "y_min": 0.69183177,
+        "y_max": 0.8855068
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.63718563,
+        "x_min": 0.10599857,
+        "x_max": 0.1678689,
+        "y_min": 0.69183177,
+        "y_max": 0.8855068
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6216017,
+        "x_min": 0.029117942,
+        "x_max": 0.029117942,
+        "y_min": 0.36890092,
+        "y_max": 0.36890092
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6216017,
+        "x_min": 0.029117942,
+        "x_max": 0.09870707,
+        "y_min": 0.36890092,
+        "y_max": 0.36890092
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6216017,
+        "x_min": 0.029117942,
+        "x_max": 0.09870707,
+        "y_min": 0.36890092,
+        "y_max": 0.5521282
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6216017,
+        "x_min": 0.029117942,
+        "x_max": 0.09870707,
+        "y_min": 0.36890092,
+        "y_max": 0.5521282
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6141542,
+        "x_min": 0.76968914,
+        "x_max": 0.76968914,
+        "y_min": 0.618587,
+        "y_max": 0.618587
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6141542,
+        "x_min": 0.76968914,
+        "x_max": 0.8341283,
+        "y_min": 0.618587,
+        "y_max": 0.618587
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6141542,
+        "x_min": 0.76968914,
+        "x_max": 0.8341283,
+        "y_min": 0.618587,
+        "y_max": 0.9232096
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6141542,
+        "x_min": 0.76968914,
+        "x_max": 0.8341283,
+        "y_min": 0.618587,
+        "y_max": 0.9232096
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6036447,
+        "x_min": 0.19892281,
+        "x_max": 0.19892281,
+        "y_min": 0.3522067,
+        "y_max": 0.3522067
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6036447,
+        "x_min": 0.19892281,
+        "x_max": 0.30196404,
+        "y_min": 0.3522067,
+        "y_max": 0.3522067
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6036447,
+        "x_min": 0.19892281,
+        "x_max": 0.30196404,
+        "y_min": 0.3522067,
+        "y_max": 0.4537588
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6036447,
+        "x_min": 0.19892281,
+        "x_max": 0.30196404,
+        "y_min": 0.3522067,
+        "y_max": 0.4537588
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5910093,
+        "x_min": 0.5838073,
+        "x_max": 0.5838073,
+        "y_min": 0.32908157,
+        "y_max": 0.32908157
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5910093,
+        "x_min": 0.5838073,
+        "x_max": 0.74255854,
+        "y_min": 0.32908157,
+        "y_max": 0.32908157
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5910093,
+        "x_min": 0.5838073,
+        "x_max": 0.74255854,
+        "y_min": 0.32908157,
+        "y_max": 0.458931
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5910093,
+        "x_min": 0.5838073,
+        "x_max": 0.74255854,
+        "y_min": 0.32908157,
+        "y_max": 0.458931
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5784992,
+        "x_min": 0.33015686,
+        "x_max": 0.33015686,
+        "y_min": 0.7065502,
+        "y_max": 0.7065502
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5784992,
+        "x_min": 0.33015686,
+        "x_max": 0.45870003,
+        "y_min": 0.7065502,
+        "y_max": 0.7065502
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5784992,
+        "x_min": 0.33015686,
+        "x_max": 0.45870003,
+        "y_min": 0.7065502,
+        "y_max": 0.84980446
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5784992,
+        "x_min": 0.33015686,
+        "x_max": 0.45870003,
+        "y_min": 0.7065502,
+        "y_max": 0.84980446
+      }
+    ],
+    "cost": 0.00225
+  },
+  "amazon": {
+    "status": "success",
+    "items": [
+      {
+        "label": "Shelf",
+        "confidence": 0.9997451782226563,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Appliance",
+        "confidence": 0.996181869506836,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Device",
+        "confidence": 0.996181869506836,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Electrical Device",
+        "confidence": 0.996181869506836,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Refrigerator",
+        "confidence": 0.996181869506836,
+        "x_min": 0.0012189592234790325,
+        "x_max": 0.9988819803111255,
+        "y_min": 0.00461032846942544,
+        "y_max": 0.9952150867320597
+      },
+      {
+        "label": "Pantry",
+        "confidence": 0.8149967956542968,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Box",
+        "confidence": 0.7358112335205078,
+        "x_min": 0.32969561219215393,
+        "x_max": 0.4560626596212387,
+        "y_min": 0.5333555340766907,
+        "y_max": 0.6717964112758636
+      }
+    ],
+    "cost": 0.001
+  },
+  "eden-ai": {
+    "status": "success",
+    "items": [
+      {
+        "label": "Packaged goods",
+        "confidence": 0.78175014,
+        "x_min": 0.8467347,
+        "x_max": 0.8467347,
+        "y_min": 0.25905117,
+        "y_max": 0.25905117
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.78175014,
+        "x_min": 0.8467347,
+        "x_max": 0.92950207,
+        "y_min": 0.25905117,
+        "y_max": 0.25905117
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.78175014,
+        "x_min": 0.8467347,
+        "x_max": 0.92950207,
+        "y_min": 0.25905117,
+        "y_max": 0.5523463
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.7052995,
+        "x_min": 0.7802808,
+        "x_max": 0.7802808,
+        "y_min": 0.24588287,
+        "y_max": 0.24588287
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.7052995,
+        "x_min": 0.7802808,
+        "x_max": 0.85546285,
+        "y_min": 0.24588287,
+        "y_max": 0.24588287
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.7052995,
+        "x_min": 0.7802808,
+        "x_max": 0.85546285,
+        "y_min": 0.24588287,
+        "y_max": 0.5433106
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.70176315,
+        "x_min": 0.930473,
+        "x_max": 0.930473,
+        "y_min": 0.26024598,
+        "y_max": 0.26024598
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.70176315,
+        "x_min": 0.930473,
+        "x_max": 0.9963122,
+        "y_min": 0.26024598,
+        "y_max": 0.26024598
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.70176315,
+        "x_min": 0.930473,
+        "x_max": 0.9963122,
+        "y_min": 0.26024598,
+        "y_max": 0.55304545
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6759496,
+        "x_min": 0.004512141,
+        "x_max": 0.004512141,
+        "y_min": 0.7441668,
+        "y_max": 0.7441668
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6759496,
+        "x_min": 0.004512141,
+        "x_max": 0.06818458,
+        "y_min": 0.7441668,
+        "y_max": 0.7441668
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6759496,
+        "x_min": 0.004512141,
+        "x_max": 0.06818458,
+        "y_min": 0.7441668,
+        "y_max": 0.95147634
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.63718563,
+        "x_min": 0.10599857,
+        "x_max": 0.10599857,
+        "y_min": 0.69183177,
+        "y_max": 0.69183177
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.63718563,
+        "x_min": 0.10599857,
+        "x_max": 0.1678689,
+        "y_min": 0.69183177,
+        "y_max": 0.69183177
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.63718563,
+        "x_min": 0.10599857,
+        "x_max": 0.1678689,
+        "y_min": 0.69183177,
+        "y_max": 0.8855068
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6216017,
+        "x_min": 0.029117942,
+        "x_max": 0.029117942,
+        "y_min": 0.36890092,
+        "y_max": 0.36890092
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6216017,
+        "x_min": 0.029117942,
+        "x_max": 0.09870707,
+        "y_min": 0.36890092,
+        "y_max": 0.36890092
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6216017,
+        "x_min": 0.029117942,
+        "x_max": 0.09870707,
+        "y_min": 0.36890092,
+        "y_max": 0.5521282
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6141542,
+        "x_min": 0.76968914,
+        "x_max": 0.76968914,
+        "y_min": 0.618587,
+        "y_max": 0.618587
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6141542,
+        "x_min": 0.76968914,
+        "x_max": 0.8341283,
+        "y_min": 0.618587,
+        "y_max": 0.618587
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6141542,
+        "x_min": 0.76968914,
+        "x_max": 0.8341283,
+        "y_min": 0.618587,
+        "y_max": 0.9232096
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6036447,
+        "x_min": 0.19892281,
+        "x_max": 0.19892281,
+        "y_min": 0.3522067,
+        "y_max": 0.3522067
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6036447,
+        "x_min": 0.19892281,
+        "x_max": 0.30196404,
+        "y_min": 0.3522067,
+        "y_max": 0.3522067
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.6036447,
+        "x_min": 0.19892281,
+        "x_max": 0.30196404,
+        "y_min": 0.3522067,
+        "y_max": 0.4537588
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5910093,
+        "x_min": 0.5838073,
+        "x_max": 0.5838073,
+        "y_min": 0.32908157,
+        "y_max": 0.32908157
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5910093,
+        "x_min": 0.5838073,
+        "x_max": 0.74255854,
+        "y_min": 0.32908157,
+        "y_max": 0.32908157
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5910093,
+        "x_min": 0.5838073,
+        "x_max": 0.74255854,
+        "y_min": 0.32908157,
+        "y_max": 0.458931
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5784992,
+        "x_min": 0.33015686,
+        "x_max": 0.33015686,
+        "y_min": 0.7065502,
+        "y_max": 0.7065502
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5784992,
+        "x_min": 0.33015686,
+        "x_max": 0.45870003,
+        "y_min": 0.7065502,
+        "y_max": 0.7065502
+      },
+      {
+        "label": "Packaged goods",
+        "confidence": 0.5784992,
+        "x_min": 0.33015686,
+        "x_max": 0.45870003,
+        "y_min": 0.7065502,
+        "y_max": 0.84980446
+      },
+      {
+        "label": "Shelf",
+        "confidence": 0.9997451782226563,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Appliance",
+        "confidence": 0.996181869506836,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Device",
+        "confidence": 0.996181869506836,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Electrical Device",
+        "confidence": 0.996181869506836,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Refrigerator",
+        "confidence": 0.996181869506836,
+        "x_min": 0.0012189592234790325,
+        "x_max": 0.9988819803111255,
+        "y_min": 0.00461032846942544,
+        "y_max": 0.9952150867320597
+      },
+      {
+        "label": "Pantry",
+        "confidence": 0.8149967956542968,
+        "x_min": null,
+        "x_max": null,
+        "y_min": null,
+        "y_max": null
+      },
+      {
+        "label": "Box",
+        "confidence": 0.7358112335205078,
+        "x_min": 0.32969561219215393,
+        "x_max": 0.4560626596212387,
+        "y_min": 0.5333555340766907,
+        "y_max": 0.6717964112758636
+      }
+    ]
+  }
+}
