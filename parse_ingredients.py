@@ -1,5 +1,9 @@
 import re
+
+from openai.embeddings_utils import cosine_similarity
+
 import openai_api
+
 
 model = 'gpt-4'
 
@@ -7,11 +11,27 @@ agent = openai_api.OpenAI_API(model=model)
 
 def get_required_ingredients(food_name:str):
     prompt = f"""
-    List the ingredients required to make {food_name} (Just create a list of items with no other text or information)
+    List the ingredients required to make {food_name} (Just create a numbered list of items with no other text or information)
+    
+    <Example Format>
+    1. Hot sauce
+    2. Potatoes
+    3. Water
+    
+    <Ingredients to make {food_name}>
     """
     response = agent.chatgpt(prompt)
     return response
     
+
+def get_ingredients_to_buy_embedding(ingredients_we_need, ingredients_we_have, threshold=0.5):
+    ingredients = [i for i in range(len(ingredients_we_need))]
+    for index, ingredient in enumerate(ingredients_we_need):
+        for ingredient_in_fridge in ingredients_we_have:
+            if cosine_similarity(ingredient, ingredient_in_fridge) > threshold:
+                ingredients.remove(index)
+                break
+    return ingredients
 
 def get_ingredients_to_buy(food_name, ingredients_we_need, ingredients_we_have):
     prompt = f"""
