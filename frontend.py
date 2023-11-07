@@ -7,7 +7,7 @@ from test import workflow
 from doordash import order
 
 def get_ingredients_recipe(text, fridge_image:np.ndarray=None):
-    openai_interface = OpenAIInterface(api_key='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')
+    openai_interface = OpenAIInterface(api_key='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')
     ingredients_prompt = f"""
     You are helping me make the food I want to eat. I want to cook {text} today.
     Please give me an itemized list of ingredients in numbered list format, where each item is in the format of 'Item:Quantity'. Then, after the heading recipe, give 

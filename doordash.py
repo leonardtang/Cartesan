@@ -8,7 +8,7 @@ import math
 import openai
 import requests
 
-openai.api_key = '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'
+openai.api_key = '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'
 openai.Model.list()
 
 def random_with_N_digits(n):
@@ -61,10 +61,10 @@ def order(items: List[Dict]):
     deliv_id = f"D-{random_with_N_digits(12)}"
     request_body = {
         "external_delivery_id": deliv_id,
-        "pickup_address": None,
-        "pickup_business_name": None,
-        "pickup_phone_number": None,
-        "pickup_instructions": None,
+        "pickup_address": "1450 Howard Ave, Burlingame, CA 94010",
+        "pickup_business_name": "Wells Fargo SF Downtown",
+        "pickup_phone_number": "+18603578008",
+        "pickup_instructions": "",
         "dropoff_address": "1868 Floribunda Ave, Hillsborough, CA 94010",
         "dropoff_business_name": "Cartesan",
         "dropoff_phone_number": "+18603578008",
