@@ -1,3 +1,11 @@
-tiktoken
-python-dotenv
-openai
+boto3==1.17.101
+clarifai_grpc==9.9.0
+gradio==3.47.1
+numpy==1.23.5
+openai==0.28.1
+PyJWT==2.8.0
+python-dotenv==1.0.0
+requests==2.27.0
+selenium==4.14.0
+tqdm==4.50.2
+undetected_chromedriver==3.5.3
